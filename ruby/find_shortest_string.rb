@@ -1,5 +1,18 @@
 def find_shortest_string(arr)
   # type your code in here
+  # print "arr #{arr}"
+  # puts
+
+  shortestStr = arr[0]
+
+  arr.each do |element|
+    # puts "each method: #{element}"
+    shortestStr = (element.size < shortestStr.size ? element : shortestStr)
+  end
+
+  # puts "shortestStr #{shortestStr}"
+
+  shortestStr
 end
 
 if __FILE__ == $PROGRAM_NAME
